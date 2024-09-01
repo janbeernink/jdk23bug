@@ -10,20 +10,19 @@
     <packaging>jlink</packaging>
 
     <properties>
-        <maven.compiler.release>22</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencyManagement>
-    <dependencies>
-    <dependency>
-        <groupId>org.junit</groupId>
-        <artifactId>junit-bom</artifactId>
-        <version>5.11.0</version>
-        <scope>import</scope>
-        <type>pom</type>
-    </dependency>
-    </dependencies>
+        <dependencies>
+            <dependency>
+                <groupId>org.junit</groupId>
+                <artifactId>junit-bom</artifactId>
+                <version>5.11.0</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+        </dependencies>
     </dependencyManagement>
 
     <dependencies>
@@ -66,5 +65,29 @@
             </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>jdk22</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <maven.compiler.release>22</maven.compiler.release>
+            </properties>
+        </profile>
+        <profile>
+            <id>jdk23</id>
+            <properties>
+                <maven.compiler.release>23</maven.compiler.release>
+            </properties>
+        </profile>
+        <profile>
+            <id>jdk24</id>
+            <properties>
+                <maven.compiler.release>24</maven.compiler.release>
+            </properties>
+        </profile>
+    </profiles>
 
 </project>
