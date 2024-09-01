@@ -6,7 +6,7 @@ jobs:
   build:
     strategy:
       matrix: 
-        jdk: [21, 22, 23, 24]
+        jdk: [22, 23, 24]
 
     runs-on: ubuntu-latest
     continue-on-error: true
