@@ -1,7 +1,8 @@
 import eu.jbeernink.jdk23bug.ServiceImplementation;
 import eu.jbeernink.jdk23bug.ServiceInterface;
 
-module eu.jbeernink.jdk23bug {
+open module eu.jbeernink.jdk23bug {
+	exports eu.jbeernink.jdk23bug;
 
 	uses ServiceInterface;
 	provides ServiceInterface with ServiceImplementation;

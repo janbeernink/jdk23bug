@@ -1,8 +1,11 @@
-package eu.jbeernink.jdk23bug;
+package eu.jbeernink.jdk23bug.test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
+
+import eu.jbeernink.jdk23bug.ServiceImplementation;
+import eu.jbeernink.jdk23bug.ServiceInterface;
 
 class ServiceInterfaceTest {
 
